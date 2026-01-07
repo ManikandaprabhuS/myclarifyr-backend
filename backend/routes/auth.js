@@ -29,6 +29,8 @@ router.post('/signup', async (req, res) => {
         password,
     });
 
+    console.log(error)
+
     if (error) return res.status(400).json({ error: error.message });
     res.json({ message: 'User registered successfully!', user: data.user });
 });
